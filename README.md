@@ -18,3 +18,29 @@ BeautifulSoup: Used the BeautifulSoup library, specifically BeautifulSoup4 (bs4)
 
 SQLAlchemy: SQLAlchemy for Object-Relational Mapping (ORM) library allowing for interaction with databases using Python objects.
 
+# Project Deliverables
+Use OOP
+Defined a company class to represent each company that is in the table. The class is essentially used to store the company data retrieved from the website. The scrape_companies function scrapes the data and creates company objects based on the scraped data.
+Using OOP allows for the encapsulation of the data and logic making the code more organised.
+
+Use of dicts, tuples and lists
+LIsts: In the code, lists are used to store multiple company dictionaries therefore enabling storage and organization of multiple companies in a single data structure.
+The code has an empty list called companies at the beginning of the scrape_companies function. 
+Tuples: In this code, tuples represent each company as an ordered collection of attributes. The company_tuple tuple holds the attributes of the company in a specific order. The tuples are used to store the company attributes in a fixed and ordered manner.
+Dictionaries: In this code, dictionaries are used to associate attribute names with their respective values for each company. The dictionary created is company_dict where the keys are the attribute names and the values are the corresponding attribute values.
+
+One to many relationships
+The one-to-many relationship is demonstrated using two entities ie the company entity and the scrape_companies function. 
+The “company: entity represents the “one” side of the relationship because it represents a single company.
+The scrape_companies function represents the “many” side of the relationship because it can create multiple instances of the company function.
+
+Use ORM to interact with a database
+Allows for a more convenient and intuitive way to interact with databases.
+Using SQLAlchemy necessitates the need to define a model class that represents the database table. For this project, the company class is created in the companies.py file. This class inherits from the base class provided by SQLAlchemy’s declarative_base()function.
+Defining the company class in this way allows SQLAlchemy to automatically create a mapping between the class and the corresponding database table.
+
+Create a table with a composite key.
+The composite key is added to our company model. The primary key is composed of multiple columns. The composite primary key in this case is using the rank and name columns. Meaning that the combinations of the rank and name values must be unique for each row in the table.
+
+
+
